@@ -11,18 +11,6 @@ Monika Roopak ; Gui Yun Tian ; Jonathon Chambers
 硝子壜
 ## 论文摘要
 该论文提出一种结合长短期记忆（LSTM）和卷积神经网络（CNN）的一种入侵检测系统，包含了基于跳跃基因融合的NSGA-Ⅱ多目标数据降维优化方法，对最新的CISID2017 DDoS攻击数据集使用高性能计算机进行训练，在时间减少5倍的条件下精度达到了99.03%，通过对其他机器学习算法进行对比，证实了该论文提出的方法优于其他方法。
-## 框图
-IDS检测模型流程：
-```flow
-st=>start: Pre-processing & Normalization
-op1=>operation: Multi-Objective optimization using NSGA-Ⅱ-aJG
-op2=>operation: Selected Features
-op3=>operation: Deep Learning Model
-op4=>operation: Anomaly Detection
-e=>end: Classification
-
-st->op1->op2->op3->op4->e
-```
 ## 主要内容
 ### 算法主要内容
 #### 基于跳跃基因的NSGA-Ⅱ特征选择非支配排序算法
@@ -35,10 +23,10 @@ st->op1->op2->op3->op4->e
 	* 最大召回率
 	* 最大准确度
 2. 种群初始化：对种群进行交叉和变异产生后代
-3. 跳跃基因操作：利用随机产生的二元字符串来代替少数染色体
-4. 新的人口是根据排名产生的
-5. 拥挤距离根据密度分配
-5. “锦标赛选择”下一代后代，通过交叉和编译操作创建新一代
+3. 跳跃基因操作：利用随机产生的二元字符串来代替少数变量
+4. 根据排名产生新的子后代
+5. 根据密度定义拥挤距离
+5. “锦标赛”式选择下一代后代，通过交叉和编译操作创建新一代
 
 #### 深度学习
 使用CNN和LSTM两个深度学习模型来处理空间和时间的数据。
